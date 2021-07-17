@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080;
+    background-color: seagreen;
+}
+main{
+    
+    width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding:30px;
+    text-align: center;
+    border-radius:10px;
+}
+#todo{
+    list-style: none;
+    padding:0;
+}
+#main-title{
+    color: seagreen;
+}
+input[type=text]{
+    width:100%;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.todo-item{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.todo-item span{
+   
+    flex-grow:1
+}
+input[type=checkbox]{
+    display:none;
+}
+.tick{
+    border:3px solid #808080;
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    cursor:pointer;
+}
+.tick::before{
+    content:"\2713";
+    color:#10ac84;
+    display:none;
+}
+.done .tick::before{
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    height:100%;
+}
+.done span{
+    text-decoration: line-through;
+}
+.todo-item button{
+    background-color: transparent;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+button img{
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+}
